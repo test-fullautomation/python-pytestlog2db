@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools==79.0.1", "wheel", "colorama==0.4.6", "pypandoc_binary==1.15", "PythonExtensionsCollection"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyTestLog2DB"
+version = "0.3.4"
+description = "Imports pytest result(s) to TestResultWebApp database"
+readme = "README.md"
+requires-python = ">=3.13"
+license = "Apache-2.0"
+authors = [
+    {name = "Tran Duy Ngoan", email = "Ngoan.TranDuy@vn.bosch.com"}
+]
+keywords = ["Pytest", "Database", "Test Results"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "colorama",
+    "TestResultDBAccess",
+    "lxml",
+]
+
+[project.urls]
+Homepage = "https://github.com/test-fullautomation/python-pytestlog2db"
+Repository = "https://github.com/test-fullautomation/python-pytestlog2db"
+
+[project.scripts]
+PyTestLog2DB = "PyTestLog2DB.pytestlog2db:PyTestLog2DB"
+
+[tool.setuptools]
+packages = ["PyTestLog2DB", "PyTestLog2DB.xsd"]
+
+[tool.setuptools.package-data]
+PyTestLog2DB = [
+    "*.pdf",
+    "xsd/*.xsd",
+]
