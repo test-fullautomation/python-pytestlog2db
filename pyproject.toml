@@ -18,7 +18,7 @@
 #
 # TOML file used for component installation
 #
-# Version 0.1.0 / 23.03.2026
+# Version 0.1.0 / 24.03.2026
 #
 # --------------------------------------------------------------------------------------------------------------
 #
@@ -93,6 +93,14 @@ Documentation = "https://github.com/test-fullautomation/python-pytestlog2db/blob
 Readme        = "https://github.com/test-fullautomation/python-pytestlog2db/blob/develop/README.rst"
 Repository    = "https://github.com/test-fullautomation/python-pytestlog2db"
 Issues        = "https://github.com/test-fullautomation/python-pytestlog2db/issues"
+
+# --------------------------------------------------------------------------------------------------------------
+# [project.scripts]
+# Defines command-line scripts (entry points) that are installed with your Python package.
+# Status: Optional
+#
+[project.scripts]
+PyTestLog2DB = "PyTestLog2DB.pytestlog2db:PyTestLog2DB"
 
 # --------------------------------------------------------------------------------------------------------------
 # [tool.setuptools]
