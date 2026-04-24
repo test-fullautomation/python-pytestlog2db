@@ -97,6 +97,18 @@
 
    "PICTURES" : "./additional_docs/pictures",
 
+# Section "DIAGRAMS":
+# -------------------
+# A 'diagram' in this context is a picture that is rendered out of source code (by PlantUML).
+# This 'DIAGRAMS' folder contains both: the source files (extension: .txt) and also the rendered pictures.
+# Additional files may import diagrams. GenPackageDoc needs to know where to find them.
+# To keep the relative paths to possibly imported diagrams valid also within the created TEX files,
+# this diagrams folder will be copied into the output folder defined by key "OUTPUT".
+# This key is optional. In case of there are no diagrams needed in this package description,
+# this key can be removed or set to null.
+
+   # "DIAGRAMS" : "./additional_docs/diagrams",
+
 # Section "OUTPUT":
 # -----------------
 # Defines the path to the output folder containing the generated tex files and the PDF file.
@@ -112,6 +124,28 @@
 
    "PDFDEST" : "../###PACKAGENAME###",
 
+# Section "HTMLDEST":
+# -------------------
+# Defines the path to a folder in which the HTML files will be copied after creation
+# (originally they are created in the "OUTPUT" folder, but without index.html).
+# This key is optional. In case of it is not required to copy the HTML files to another location,
+# this key can be removed or set to null.
+#
+# Caution: !!! This folder will be deleted by GenPackageDoc. Do not define a folder here containing other sources also !!!
+
+   "HTMLDEST" : "../###PACKAGENAME###/html_doc",
+
+# Section "CONFIGDEST":
+# ---------------------
+# Defines the path to a folder in which a dump of the current configuration will be copied to.
+# The configuration dump is part of the build output (section 'OUTPUT') and available in txt and in json format.
+# It might be useful for further processes to have access to all details regarding the current
+# documentation build.
+# This key is optional. In case of it is not required to have the configuration dump saved
+# this key can be removed or set to null.
+
+   "CONFIGDEST" : null,
+
 # Section "TEX":
 # -----------------
 # Converting the generated text source files to a PDF document requires a LaTeX distribution.
@@ -124,4 +158,26 @@
             "WINDOWS" : "%GENDOC_LATEXPATH%/pdflatex.exe",
             "LINUX"   : "${GENDOC_LATEXPATH}/pdflatex"
            }
+
+# Section "JAVA":
+# ---------------
+# GenPackageDoc supports PlantUML, that is a Java application. Therefore GenPackageDoc needs to know
+# where to find Java.
+# This key is optional. In case of Java is not required (because of also PlantUML is not required),
+# this key can be removed or set to null.
+
+#   "JAVA" : {
+#             "WINDOWS" : "%JAVA_HOME%/bin/java.exe",
+#             "LINUX"   : "${JAVA_HOME}/bin/java"
+#            },
+
+# Section "PLANT_UML":
+# --------------------
+# GenPackageDoc supports PlantUML. Therefore GenPackageDoc needs to know where to find PlantUML.
+# This key is optional. In case of PlantUML is not required, this key can be removed or set to null.
+
+#   "PLANT_UML" : {
+#                  "WINDOWS" : "%GENDOC_PLANTUML_PATH%/plantuml.jar",
+#                  "LINUX"   : "${GENDOC_PLANTUML_PATH}/plantuml.jar"
+#                 }
 }
