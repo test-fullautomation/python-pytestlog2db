@@ -1,20 +1,4 @@
 {
    "REPOSITORYNAME" : "python-pytestlog2db",
-   "PACKAGENAME" : "PyTestLog2DB",
-   "AUTHOR" : "Tran Duy Ngoan",
-   "AUTHOREMAIL" : "Ngoan.TranDuy@vn.bosch.com",
-   "DESCRIPTION" : "Imports pytest result(s) to TestResultWebApp database",
-   "LONGDESCRIPTIONCONTENTTYPE" : "text/markdown",
-   "URL" : "https://github.com/test-fullautomation/python-pytestlog2db",
-   "PROGRAMMINGLANGUAGE" : "Programming Language :: Python :: 3",
-   "LICENCE" : "License :: OSI Approved :: Apache Software License",
-   "OPERATINGSYSTEM" : "Operating System :: OS Independent",
-   "PYTHONREQUIRES" : ">=3.0",
-   "DEVELOPMENTSTATUS" : "Development Status :: 4 - Beta",
-   "INTENDEDAUDIENCE" : "Intended Audience :: Developers",
-   "TOPIC" : "Topic :: Software Development",
-   "INSTALLREQUIRES" : ["colorama","TestResultDBAccess","lxml"],
-   "PACKAGEDATA" : ["*.pdf", "xsd/*.xsd"],
-   "PACKAGEDOC" : "./packagedoc",
-   "CONSOLESCRIPTS" : ["PyTestLog2DB = PyTestLog2DB.pytestlog2db:PyTestLog2DB"]
+   "PACKAGEDOC"     : "./packagedoc"
 }

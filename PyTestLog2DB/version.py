@@ -1,6 +1,6 @@
 # **************************************************************************************************************
 #
-#  Copyright 2020-2023 Robert Bosch GmbH
+#  Copyright 2020-2026 Robert Bosch GmbH
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -18,5 +18,5 @@
 #
 # Version and date of PyTestLog2DB
 #
-VERSION      = "0.3.4"
-VERSION_DATE = "02.08.2024"
+VERSION      = "0.4.0"
+VERSION_DATE = "23.03.2026"
