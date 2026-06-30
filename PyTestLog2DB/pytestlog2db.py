@@ -39,7 +39,14 @@ from lxml import etree
 from datetime import datetime, timedelta
 from dateutil import parser
 import platform
-from pkg_resources import get_distribution
+
+# Use importlib.metadata (Python 3.8+) with fallback to pkg_resources
+try:
+   from importlib.metadata import version as get_package_version
+except ImportError:
+   from pkg_resources import get_distribution
+   def get_package_version(name):
+      return get_distribution(name).version
 
 from TestResultDBAccess import DBAccessFactory
 from PyTestLog2DB.version import VERSION, VERSION_DATE
@@ -109,7 +116,7 @@ This information is used as default value for `testtool` when importing.
    # Try to get pytest version
    # Incase pytest is not installed, set to 'unknown_version'
    try:
-      sPytestVersion = get_distribution('pytest').version
+      sPytestVersion = get_package_version('pytest')
    except:
       pass
 
