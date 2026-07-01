@@ -944,7 +944,8 @@ Process to the lowest suite level (test file):
    """
 
    # File metadata
-   previous_file_name = ""
+   previous_file_name = None
+   suite_name = (suite.get("name") or "").strip() or "unknown_suite"
    _tbl_file_id = None
    _tbl_file_tester_account = dConfig["tester"]
    _tbl_file_tester_machine = suite.get("hostname")
@@ -954,7 +955,7 @@ Process to the lowest suite level (test file):
 
    test_number = 1
    for test in suite.iterchildren("testcase"):
-      _tbl_file_name = test.get("classname")
+      _tbl_file_name = test.get("classname") or suite_name
       component_name = process_component_info(dConfig, _tbl_file_name)
       # Create new testfile if not existing in this execution (different classname with previous one)
       if previous_file_name != _tbl_file_name:
