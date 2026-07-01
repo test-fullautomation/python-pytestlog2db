@@ -945,7 +945,7 @@ Process to the lowest suite level (test file):
 
    # File metadata
    previous_file_name = None
-   suite_name = suite.get("name")
+   suite_name = (suite.get("name") or "").strip() or "unknown_suite"
    _tbl_file_id = None
    _tbl_file_tester_account = dConfig["tester"]
    _tbl_file_tester_machine = suite.get("hostname")
