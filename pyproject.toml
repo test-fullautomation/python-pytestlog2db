@@ -62,6 +62,7 @@ dependencies = [
     "colorama",
     "TestResultDBAccess",
     "lxml",
+    "python-dateutil",
     "PythonExtensionsCollection",
     "GenPackageDoc"
 ]
@@ -126,4 +127,3 @@ packages = ["PyTestLog2DB"]
 #
 [tool.setuptools.dynamic]
 version = {attr = "PyTestLog2DB.version.VERSION"} # not defined here; we take the version from source code
-
